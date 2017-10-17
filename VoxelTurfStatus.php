@@ -27,8 +27,8 @@ class VoxelTurfStatus {
 		$this->players = $status[2];
 		$this->maxPlayers = $status[3];
 		$this->public = $status[4] == 'true';
-		$this->serverName = $status[5];
-		$this->gameMode = $status[6];
+		$this->serverName = trim($status[5], '" ');
+		$this->gameMode = trim($status[6], '" ');
 		$this->version = $status[7];
 
 		return $this;
